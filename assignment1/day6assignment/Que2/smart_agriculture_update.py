@@ -15,17 +15,17 @@ moisture_level=int(input("Enter new moisture_level: "))
 
 query=f"UPDATE soil_moisture SET moisture_level={moisture_level} WHERE sensor_id={id};"
 
-# create a cursor to execute a query
+
 cursor = connection.cursor()
 
-# execute a query
+
 cursor.execute(query)
 
-# commit your changes on mysql server
+
 connection.commit()
 
-# close the cursor
+
 cursor.close()
 
-# close the connection with mysql server
+
 connection.close()
